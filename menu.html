@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button data-level="easy">Легкий</button>
+  <button data-level="middle">Средний</button>
+  <button data-level="hard">Сложный</button>
+  <br>
+  <a href="pic-1.html">Паззл 1</a>
+
+  <button>START</button>
+
+  <script>
+    const buttons = document.querySelectorAll("button")
+
+    for (const btn of buttons) {
+      btn.addEventListener("click", (e) => {
+        const level = btn.dataset.level;
+        for (const btn of buttons) {
+          btn.style.background = ""
+        }
+        btn.style.background = "green"
+        localStorage.setItem("PUZZLE_LEVEL", level)
+      })
+    }
+  </script>
+</body>
+</html>

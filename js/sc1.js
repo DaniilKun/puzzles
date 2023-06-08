@@ -17,7 +17,7 @@ switch (level) {
     break;          
 }
 
-const frame = new Frame("fit", 1800, 1500, "#CC9A51", lighten, "pic-1.jpg", "images/puzzle/");
+         const frame = new Frame("fit", 3800, 3500, "#CC9A51", lighten, "pic-1.jpg", "images/puzzle/");
          frame.on("ready", ()=>{ // ES6 Arrow Function - similar to function(){}
              zog("ready from ZIM Frame"); // logs in console (F12 - choose console)
          
@@ -78,6 +78,7 @@ const frame = new Frame("fit", 1800, 1500, "#CC9A51", lighten, "pic-1.jpg", "ima
              
              // ~~~~~~~~~~~~~~~~~~~~~
              // PUZZLE SIZE
+             
              
              const obj = getQueryString(); // note, getQueryString returns {} now if no query string    
              if (obj.col) numX = Math.min(14, Number(obj.col)); // or we would have to start chaching things...
@@ -278,6 +279,7 @@ const frame = new Frame("fit", 1800, 1500, "#CC9A51", lighten, "pic-1.jpg", "ima
          						// so not sure what to do... here is a the puzzle on ZIM
                                  .tap(()=>{zgo("5.html", "");})
                                  window.location.href = "test.html"
+
                          });                             
                      } else stats.text = `Собрано ${placed} ${placed==1?"":""} из ${num} фрагментов`;
                  } else stage.update();    

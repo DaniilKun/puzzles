@@ -10,5 +10,3 @@ run the project using live server
     html
     css
     js
-# puzzles
-# puzzles
