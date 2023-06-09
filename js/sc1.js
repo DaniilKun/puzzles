@@ -250,6 +250,8 @@ switch (level) {
                      emitter.loc(box).spurt(30);
                      placed++;
                      if (placed==num) {
+                        window.location.href = "test.html"
+
                          stats.text = `Поздравляем, все ${num} фрагмента собраны!`;
                          timeout(1, function () {
                              emitter.emitterForce = 8;
@@ -278,7 +280,6 @@ switch (level) {
          						// but it is different in CodePen and they have disabled document.location.reload()
          						// so not sure what to do... here is a the puzzle on ZIM
                                  .tap(()=>{zgo("5.html", "");})
-                                 window.location.href = "test.html"
 
                          });                             
                      } else stats.text = `Собрано ${placed} ${placed==1?"":""} из ${num} фрагментов`;
